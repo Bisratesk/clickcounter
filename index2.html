@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click Counter</title>
+</head>
+<body>
+  <h1>Click Counter</h1>                                           
+  <p>Count: <span id="count">0</span></p>
+  <button id="clickBtn">Click Me</button>
+
+  <script>
+    // Get count from localStorage or default to 0
+    let count = localStorage.getItem('clickCount') || 0;
+
+    // Update the display
+    document.getElementById('count').textContent = count;
+
+    // Button click event
+    document.getElementById('clickBtn').onclick = function () {
+      count++;
+      //display
+      document.getElementById('count').textContent = count;
+      //save
+      localStorage.setItem('clickCount', count);
+    };
+  </script>
+</body>
+</html>
