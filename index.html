@@ -6,7 +6,7 @@
 <body>
   <h1>Click Counter</h1>                                           
   <p>Count: <span id="count">0</span></p>
-  <button id="clickBtn">Click Me</button>
+  <button id="clickButtonn">Click Me</button>
 
   <script>
     // Get count from localStorage or default to 0
@@ -16,7 +16,7 @@
     document.getElementById('count').textContent = count;
 
     // Button click event
-    document.getElementById('clickBtn').onclick = function () {
+    document.getElementById('clickButton').onclick = function () {
       count++;
       //display
       document.getElementById('count').textContent = count;
